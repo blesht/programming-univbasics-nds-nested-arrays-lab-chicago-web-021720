@@ -25,7 +25,10 @@ def assembled_matrix
 end
 
 def sorted_matrix
-  spice_nest = [CONVENTIONAL_PRODUCE.sort!,ORGANIC_PRODUCE.sort!]
+  c_produce_sorted = CONVENTIONAL_PRODUCE.sort 
+  o_produce_sorted = ORGANIC_PRODUCE.sort 
+  sorted_list = [c_produce_sorted,o_produce_sorted]
+  # spice_nest = [CONVENTIONAL_PRODUCE.sort!,ORGANIC_PRODUCE.sort!]
   # Using Array literal syntax only, build another nested array that 
   # uses the arrays of conventional and organic produce as before.
   # However, this time, sort each internal array alphabetically by the first character
